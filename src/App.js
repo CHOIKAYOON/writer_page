@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Templete from '../src/components/Template'
+import TodoList from '../src/components/TdoList'
+import TodoInsert from '../src/components/TodoInsert'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  const [insertTodo, sertInserTodo] = useState(false);
+  const [todos, setTodos] = useState([
+    {
+      id : 1,
+      text: '오늘 할일',
+      checked : true
+    },
+    {
+      id : 2,
+      text: '오늘 할일2',
+      checked : false
+    },
+    {
+      id : 3,
+      text: '오늘 할일 3',
+      checked : true
+    }
+  ]);
+
+  const onInsertToogle =() =>{
+    sertInserTodo(prev => !prev)
+  }
+
+  return(
+  <Templete onInsertToogle ={onInsertToogle}>
+    <TodoList todos={todos} />
+    {insertTodo && <TodoInsert onInsertToogle ={onInsertToogle}/>}
+  </Templete> 
+  )
 }
 
 export default App;
