@@ -19,13 +19,13 @@ form{
     width: 500px;
     height: 300px;
     border-radius: 10px;
-    z-index: 987;
+    z-index: 990;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     position: absolute;
     top: 30%;
-    left: 30%;
+    left: 0%;
 }
 
 form > input {
@@ -35,6 +35,8 @@ form > input {
     border: none;
     border-bottom: 1px solid #f67280;
     width: 400px;
+    height: 30px;
+    z-index: 990;
 }
 
 form > button{
