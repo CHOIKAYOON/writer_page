@@ -4,8 +4,11 @@ import Templete from '../src/components/Template'
 import TodoList from '../src/components/TdoList'
 import TodoInsert from '../src/components/TodoInsert'
 
+
+let nextId = 4;
 const App = () => {
-  const [insertTodo, sertInserTodo] = useState(false);
+  const [selecteTodo , setChagedTodo] = useState(null)
+  const [insertTodo, setInserTodo] = useState(false);
   const [todos, setTodos] = useState([
     {
       id : 1,
@@ -25,13 +28,41 @@ const App = () => {
   ]);
 
   const onInsertToogle =() =>{
-    sertInserTodo(prev => !prev)
+    setInserTodo(prev => !prev)
+  }
+
+  const onInsertTodo = (text) =>{
+    if(text == ''){
+      return alert("할 일을 입력해주세요.")
+    }else{
+      const todo ={
+        id : nextId,
+        text,
+        checked : false
+      }
+      setTodos(todos => todos.concat(todo));
+      nextId++;
+    }
+  }
+
+  const onSelectedchangedTodo =(todo) =>{
+    setChagedTodo(todo)
   }
 
   return(
   <Templete onInsertToogle ={onInsertToogle}>
-    <TodoList todos={todos} />
-    {insertTodo && <TodoInsert onInsertToogle ={onInsertToogle}/>}
+    <TodoList 
+      todos={todos} 
+      onInsertToogle={onInsertToogle}
+      onSelectedchangedTodo={onSelectedchangedTodo}
+      />
+    {insertTodo && (
+    <TodoInsert 
+      onInsertToogle ={onInsertToogle}
+      onInsertTodo={onInsertTodo}
+      selecteTodo={selecteTodo}
+    />
+    )}
   </Templete> 
   )
 }

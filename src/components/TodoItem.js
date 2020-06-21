@@ -1,10 +1,14 @@
 import React from 'react';
 import './Template.css'
 
-const TodoItem =({todo}) =>{
+const TodoItem =({todo, onInsertToogle, onSelectedchangedTodo}) =>{
     const { text } = todo;
     return(
-        <div className="Todo_View">
+        <div className="Todo_View" 
+        onClick={()=>{
+            onInsertToogle();
+            onSelectedchangedTodo(todo);
+            }} >
             <input type="checkbox"  />
             {text}
         </div>
