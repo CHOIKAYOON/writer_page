@@ -1,10 +1,8 @@
-![샘플](https://user-images.githubusercontent.com/31337244/86211086-bb588400-bbb0-11ea-967d-78d2830fd2cc.JPG)
-![샘플2](https://user-images.githubusercontent.com/31337244/86211089-bc89b100-bbb0-11ea-9cb9-7f3c07f21714.JPG)
+![샘플](https://user-images.githubusercontent.com/31337244/86211086-bb588400-bbb0-11ea-967d-78d2830fd2cc.JPG)![샘플2](https://user-images.githubusercontent.com/31337244/86211089-bc89b100-bbb0-11ea-9cb9-7f3c07f21714.JPG)
 
 
 ## 일정표 관리 샘플 페이지
 
-In the project directory, you can run:
 
 ### `npm start`
 
