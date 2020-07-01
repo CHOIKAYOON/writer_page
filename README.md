@@ -20,7 +20,7 @@
     
     -----------------------------------------------
     
-### `useSet / userEffect를 사용하여 개발 - Hook`
+### `useState / useEffect 사용하여 개발 - Hook`
 
-* TodoInset에서 useSet을 사용하여, 함수 자체내에서 '' 값을 넣어서 구현.
-* TodoInset에서 useEffect를 사용하여 일정표 값 'selecteTodo'값이 비어있으며, 새 팝업창 호출, 그게 아니면 기존에 있던 값으로 노출 되도록 구현. 
+* TodoInset에서 useState 사용하여, 함수 자체내에서 '' 값을 넣어서 구현.
+* TodoInset에서 useEffect 사용하여 일정표 값 'selecteTodo'값이 비어있으며, 새 팝업창 호출, 그게 아니면 기존에 있던 값으로 노출 되도록 구현. 
